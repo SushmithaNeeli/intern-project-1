@@ -1,0 +1,163 @@
+.image {
+    padding-top: 90px;
+    height: 250px
+}
+
+@keyframes bikePedal {
+    0% {
+        transform: translateX(0) scaleX(1); /* Start: left-to-right, facing right */
+    }
+    50% {
+        transform: translateX(120vw) scaleX(1); /* End of forward movement */
+    }
+    50.1% {
+        transform: translateX(120vw) scaleX(-1); /* Flip to face left */
+    }
+    100% {
+        transform: translateX(0) scaleX(-1); /* Move back, facing left */
+    }
+}
+
+.girl-bike {
+    animation: bikePedal 6s infinite ease-in-out forwards;
+    position: relative;
+}
+
+
+.bg-container {
+    background-image: url("https://res.cloudinary.com/dvllsbsy4/image/upload/v1729592440/bg_qrtb79.jpg");
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loginform {
+    background-color: transparent;
+    border-radius: 25px;
+    background: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    width: 300px;
+    text-align: center;
+    padding: 20px;
+}
+
+.top-part {
+    background-color: white;
+    padding: 10px;
+    margin: 10px 0;
+    color: #8f1907;
+    font-size: 18px;
+}
+
+.red {
+    background-color: #8f1907;
+    color: #ffffff;
+    padding: 10px;
+    margin: 10px 0;
+    font-size: 18px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.heading {
+    color: #8f1907;
+    font-family: 'Arial', sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.bottom-section {
+    color: #8f1907;
+    margin-top: 20px;
+}
+
+.bottom-section a {
+    color: #8f1907;
+    text-decoration: underline;
+    font-weight: 400;
+    cursor: pointer;
+}
+
+.bottom-section a:hover {
+    text-decoration: none;
+}
+
+/* Full-page container for leaves */
+.grid-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw; /* Full width of the page */
+    height: 100vh; /* Full height of the page */
+    overflow: hidden; /* Prevents expanding page height */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+@keyframes leaf-move {
+    0% {
+        transform: translateY(-50px); /* Starts slightly above the viewport */
+    }
+    100% {
+        transform: translateY(100vh); /* Ends slightly below the viewport */
+    }
+}
+
+.leaf {
+    height: 50px;
+    width: auto;
+    animation: leaf-move 6s infinite linear;
+    z-index: 1;
+}
+
+
+/* Example for individual leaves */
+.leaf:nth-child(1) {
+    left: 10%; /* Start at 10% of the page width */
+    animation-delay: 0s;
+}
+
+.leaf:nth-child(2) {
+    left: 30%;
+    animation-delay: 1s;
+}
+
+.leaf:nth-child(3) {
+    left: 50%;
+    animation-delay: 1.8s;
+}
+
+.leaf:nth-child(4) {
+    left: 70%;
+    animation-delay: 1.5s;
+}
+
+.leaf:nth-child(5) {
+    left: 90%;
+    animation-delay: 2s;
+}
+.leaf:nth-child(6) {
+    left: 90%;
+    animation-delay: 2.3s;
+}
+.leaf:nth-child(7) {
+    left: 90%;
+    animation-delay: 1.2s;
+}
+.leaf:nth-child(8) {
+    left: 90%;
+    animation-delay: 2s;
+}
+
+.reversed-image {
+    width: 200px;
+    /* Adjust width as needed */
+    transform: scaleX(-1);
+    /* Flips the image horizontally */
+}
